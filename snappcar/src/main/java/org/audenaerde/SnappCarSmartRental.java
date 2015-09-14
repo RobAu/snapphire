@@ -34,9 +34,7 @@ public class SnappCarSmartRental
 		List<RentalOption> rentalOptions = getRentalOptions(pages, request);
 		for (RentalOption h : rentalOptions)
 		{
-			System.out.println(h.c.owner + " == " + h.totalPrice + " -- "
-					+ h.distance + "km -- "
-					+ h.c.url);
+			System.out.println(h.asTabbedString());
 		}
 
 	}
@@ -120,11 +118,6 @@ public class SnappCarSmartRental
 				car.latitude = (double) items.get(1);
 				car.longitude = (double) items.get(2);
 			}
-
-			// Elements dis = doc.select("a[href=#map]").select("li");
-			// double distance = parseDouble(dis.text());
-			//
-			// car.setDistance(distance);
 
 			Elements kmdetail = doc.select("li:contains(kilometers)");
 

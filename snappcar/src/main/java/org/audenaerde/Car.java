@@ -31,6 +31,9 @@ public class Car
 	String name;
 	String id;
 	String owner;
+	String imageUrl;
+
+
 
 
 
@@ -68,4 +71,14 @@ public class Car
 	{
 		this.owner = owner;
 	}
+	public String getImageUrl()
+	{
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl)
+	{
+		this.imageUrl = imageUrl;
+	}
+
 }

@@ -21,7 +21,7 @@ public class RentalOption implements Comparable<RentalOption>
 	
 	public String asTabbedString()
 	{
-		return String.format("%-20s   %8.2f   %8.2f   %-50s", c.owner, totalPrice, distance, c.url);
+		return String.format("%-20s   %8.2f   %8.2f   %-50s", c.owner, totalPrice, distance, c.imageUrl);
 	}
 
 	

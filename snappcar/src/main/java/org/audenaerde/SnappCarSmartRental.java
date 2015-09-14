@@ -28,7 +28,7 @@ public class SnappCarSmartRental
 {
 	public static void main(String[] args) throws IOException
 	{
-		int pages = 2;
+		int pages = 1;
 		RentalRequest request = new RentalRequest();
 
 		List<RentalOption> rentalOptions = getRentalOptions(pages, request);
@@ -83,8 +83,10 @@ public class SnappCarSmartRental
 			String carurl = elem.attr("data-href");
 			String price = elem.select("div[class=price h1]").text();
 			String owner = elem.select("img[class=owner-image]").attr("title");
+			String imageUrl = elem.select("img[class=car-image]").attr("src");
 			Car c = new Car(carurl, price);
 			c.setOwner(owner);
+			c.setImageUrl(imageUrl);
 			cars.add(c);
 
 		}
